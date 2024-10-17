@@ -19,10 +19,6 @@
       {
         packages = {
           minizinc-python = mkPoetryApplication { projectDir = self; };
-          minizinc-python-dev = mkPoetryApplication {
-            projectDir = self;
-            groups = [ "dev" "test" ];
-          };
           default = self.packages.${system}.minizinc-python;
         };
       }
