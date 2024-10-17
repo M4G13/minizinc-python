@@ -25,11 +25,6 @@
           };
           default = self.packages.${system}.minizinc-python;
         };
-
-        devShells.default = pkgs.mkShell {
-          inputsFrom = [ self.packages.${system}.minizinc-python-dev ];
-          packages = [ pkgs.poetry ];
-        };
       }
     );
 }
