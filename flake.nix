@@ -18,7 +18,7 @@
       in
       {
         packages = {
-          minizinc-python = mkPoetryApplication { projectDir = ./.; };
+          minizinc-python = mkPoetryApplication { projectDir = ./.; preferWheels = true; };
           default = self.packages.${system}.minizinc-python;
         };
       }
